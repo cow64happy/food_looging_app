@@ -2,5 +2,5 @@ streamlit
 matplotlib
 pandas
 Pillow
-koreanize-matplotlib
+
 
