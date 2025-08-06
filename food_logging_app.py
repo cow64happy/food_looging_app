@@ -5,8 +5,16 @@ import uuid
 import matplotlib.pyplot as plt
 import pandas as pd
 from datetime import datetime
+import matplotlib.font_manager as fm
 
-# ✅ 한글 깨짐 방지
+# ✅ 한글 깨짐 방지 (NanumGothic 다운로드 및 적용)
+font_url = "https://github.com/naver/nanumfont/blob/master/ttf/NanumGothic.ttf?raw=true"
+font_path = "NanumGothic.ttf"
+if not os.path.exists(font_path):
+    import urllib.request
+    urllib.request.urlretrieve(font_url, font_path)
+    fm.fontManager.addfont(font_path)
+
 plt.rcParams['font.family'] = 'NanumGothic'
 plt.rcParams['axes.unicode_minus'] = False
 
